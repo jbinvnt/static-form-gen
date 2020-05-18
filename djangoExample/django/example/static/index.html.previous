@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 
+
+
 <html lang="en">
+
+
 
     <head>
 
+
+
         <meta charset="utf-8">
+
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
         <title>Form Page</title>
+
+
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
+
     </head>
+
+
 
     <body class="text-center">
 
+
+
         <div class="container">
+
+
 
 		<!-- <SForm class="CarForm"> -->
 
+<form>
 <p><label for="id_license_plate">License plate:</label> <input type="text" name="license_plate" maxlength="7" required id="id_license_plate"></p>
 <p><label for="id_vin_number">Vin number:</label> <input type="text" name="vin_number" maxlength="17" required id="id_vin_number"></p>
 <p><label for="id_purchase_date">Purchase date:</label> <input type="text" name="purchase_date" value="2020-05-18" required id="id_purchase_date"><input type="hidden" name="initial-purchase_date" value="2020-05-18" id="initial-id_purchase_date"></p>
 <p><label for="id_miles">Miles:</label> <input type="number" name="miles" value="0" min="0" required id="id_miles"></p>
+</form>
 <!-- </SForm> -->
+
+
 
         </div>
 
+
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
 
     </body>
 
+
+
 </html>
+
+
 

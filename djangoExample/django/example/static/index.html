@@ -2,7 +2,15 @@
 
 
 
+
+
+
+
 <html lang="en">
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@
 
 
 
+
+
+
+
         <meta charset="utf-8">
+
+
+
+
 
 
 
@@ -18,7 +34,15 @@
 
 
 
+
+
+
+
         <title>Form Page</title>
+
+
+
+
 
 
 
@@ -26,7 +50,15 @@
 
 
 
+
+
+
+
     </head>
+
+
+
+
 
 
 
@@ -34,19 +66,30 @@
 
 
 
+
+
+
+
         <div class="container">
 
 
 
+
+
+
+		<form action="/cars" method="post">
 		<!-- <SForm class="CarForm"> -->
 
-<form>
 <p><label for="id_license_plate">License plate:</label> <input type="text" name="license_plate" maxlength="7" required id="id_license_plate"></p>
 <p><label for="id_vin_number">Vin number:</label> <input type="text" name="vin_number" maxlength="17" required id="id_vin_number"></p>
 <p><label for="id_purchase_date">Purchase date:</label> <input type="text" name="purchase_date" value="2020-05-18" required id="id_purchase_date"><input type="hidden" name="initial-purchase_date" value="2020-05-18" id="initial-id_purchase_date"></p>
 <p><label for="id_miles">Miles:</label> <input type="number" name="miles" value="0" min="0" required id="id_miles"></p>
-</form>
 <!-- </SForm> -->
+<input type="submit" value="Create">
+		</form>
+
+
+
 
 
 
@@ -54,7 +97,15 @@
 
 
 
+
+
+
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+
+
 
 
 
@@ -62,7 +113,15 @@
 
 
 
+
+
+
+
 </html>
+
+
+
+
 
 
 

@@ -30,12 +30,10 @@ class Command(BaseCommand):
                             result = regex.search(line)
                             if result:
                                 print(line)
-                                print("<form>")
                                 found = True
                                 className = result.group(1) # the first capture group, which is the class name
                                 if className in locals():
                                     print(locals()[className]().as_p())
-                                    print("</form>")
                                 else:
                                     raise CommandError("Could not expand the class name %s. Make sure this name is in the module you specified." % className)
                             else:
