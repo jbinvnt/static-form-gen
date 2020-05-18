@@ -21,16 +21,19 @@ class Command(BaseCommand):
                     with FileInput(path.join(settings.BASE_DIR, options['static-dir'], filename), inplace=True, backup='.previous') as f:
                         found = False #TODO this will break if user tries nested forms. Fix with stack?
                         for line in f:
-                            if found and not endtag.search(line):
+                            if found:
+                                if not endtag.search(line):
+                                    continue
                                 found = False
+                                print(line)
                                 continue
                             result = regex.search(line)
                             if result:
+                                print(line)
                                 found = True
-                                className = result.group(0)
+                                className = result.group(1) # the first capture group, which is the class name
                                 if className in locals():
-                                    print(locals()[className].as_p())
-                                    print("</SForm>")
+                                    print(locals()[className]().as_p())
                                 else:
                                     raise CommandError("Could not expand the class name %s. Make sure this name is in the module you specified." % className)
                             else:
